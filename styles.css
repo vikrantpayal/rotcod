@@ -1,0 +1,102 @@
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Panel */
+.header-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: salmon;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Container */
+/*  used in the header panel for the web site and page name
+    also used for profile and notifications section */
+.title-container {
+    display: flex;
+    flex-direction: row; /* Arrange website-name and page-name in a row */
+    align-items: center; /* Align the text vertically */
+    gap: 10px; /* Space between website name and page title */
+}
+
+.website-name{
+    font-size: 18px; /* Ensure both have the same font size */
+    font-weight:bolder;/* Optional: Adjust font weight for uniformity */
+    color: white;    
+}
+
+.page-name {
+    font-size: 18px; /* Ensure both have the same font size */
+    font-weight: normal; /* Optional: Adjust font weight for uniformity */
+    color: #FFD700;;
+}
+
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: #0056b3;
+}
+
+/* Notifications */
+.notifications button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.notifications button:hover {
+    color: #FFD700;
+}
+
+/* Profile Picture */
+.profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-panel {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .notifications,
+    .profile {
+        order: 1; /* Move to the last row for smaller screens */
+    }
+}
